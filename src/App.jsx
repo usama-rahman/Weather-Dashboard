@@ -1,3 +1,16 @@
-export default function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+import WeatherBoard from "./components/Weather/WeatherBoard";
+import Header from "./components/header/Header";
+
+function App() {
+  return (
+    <>
+      <body className="bg-body font-[Roboto] text-light bg-[url('../assets/body-bg.png')] bg-no-repeat bg-cover h-screen grid place-items-center">
+        <Header />
+        <main>
+          <WeatherBoard />
+        </main>
+      </body>
+    </>
+  );
 }
+export default App;
