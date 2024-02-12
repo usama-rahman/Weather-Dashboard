@@ -1,16 +1,12 @@
-import WeatherBoard from "./components/Weather/WeatherBoard";
-import Header from "./components/header/Header";
+import Page from "./Page";
+
+import { WeatherProvider } from "./provider";
 
 function App() {
   return (
-    <>
-      <body className="bg-body font-[Roboto] text-light bg-[url('../assets/body-bg.png')] bg-no-repeat bg-cover h-screen grid place-items-center">
-        <Header />
-        <main>
-          <WeatherBoard />
-        </main>
-      </body>
-    </>
+    <WeatherProvider>
+      <Page />
+    </WeatherProvider>
   );
 }
 export default App;
