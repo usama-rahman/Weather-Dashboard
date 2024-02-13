@@ -4,12 +4,12 @@ import Header from "./components/header/Header";
 function Page() {
   return (
     <>
-      <body className="bg-body font-[Roboto] text-light bg-[url('../assets/body-bg.png')] bg-no-repeat bg-cover h-screen grid place-items-center">
+      <section className="bg-body font-[Roboto] text-light bg-[url('../assets/body-bg.png')] bg-no-repeat bg-cover h-screen grid place-items-center">
         <Header />
         <main>
           <WeatherBoard />
         </main>
-      </body>
+      </section>
     </>
   );
 }
