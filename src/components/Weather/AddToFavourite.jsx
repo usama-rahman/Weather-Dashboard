@@ -1,7 +1,7 @@
 import HeartIcon from "../../assets/heart.svg";
 import RedHeartIcon from "../../assets/heart-red.svg";
 
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FavouriteContext, WeatherContext } from "../../context";
 
 function AddToFavourite() {
@@ -14,6 +14,11 @@ function AddToFavourite() {
   const [isFavourite, toggleFavourite] = useState(false);
 
   const { latitude, longitude, location } = weatherData;
+
+  useEffect(() => {
+    const found = favourite.find((fav) => fav.location);
+    toggleFavourite(found);
+  }, []);
 
   const handleFavourites = () => {
     const found = favourite.find((fav) => fav.location === location);
